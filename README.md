@@ -5,7 +5,7 @@
 подготовливается в рамках:
 
 * обучающих проектов SilverBulleters 
-* доклада для Agile Kitchen
+* доклада для Agile Kitchen - https://agilerussia.timepad.ru/event/336745/
 * отладка облачного контура команды разработки 1С
 
 ## Выпуск релиза 0.9
