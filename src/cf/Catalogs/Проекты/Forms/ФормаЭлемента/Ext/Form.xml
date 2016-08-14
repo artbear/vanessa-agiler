@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="КаталогПроекта" id="7">
+			<DataPath>Объект.КаталогПроекта</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ChoiceButton>true</ChoiceButton>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="КаталогПроектаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КаталогПроектаРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="StartChoice">КаталогПроектаНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<Table name="Цели" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЦелиКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ЦелиКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="ЦелиРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ЦелиСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>Цели</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЦелиСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ЦелиСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЦелиСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>Цели</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЦелиСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ЦелиСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЦелиУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>Цели</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЦелиУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ЦелиУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ЦелиНомерСтроки" id="23">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЦелиНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ЦелиНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="ЦелиЦель" id="26">
+					<EditMode>EnterOnInput</EditMode>
+					<CreateButton>false</CreateButton>
+					<ContextMenu name="ЦелиЦельКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЦелиЦельРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<CheckBoxField name="ЦелиДостигнута" id="29">
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЦелиДостигнутаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЦелиДостигнутаРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Проекты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

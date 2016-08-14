@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.1">
+	<Item id="56aec9d9-f33a-4efe-be44-27a76e6216ef">
+		<Name>ОбъемРабот</Name>
+		<Code>000000001</Code>
+		<Description>Объем работ</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="082f13ac-58b6-441b-963c-1d794e01384c">
+				<Name>Большой</Name>
+				<Code>000000005</Code>
+				<Description>Большой</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="411eaf07-33e0-49a0-b507-462ad16bc071">
+				<Name>Небольшой</Name>
+				<Code>000000003</Code>
+				<Description>Небольшой</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8a0e7b7b-c4d3-45b9-9e3d-e9efdaeea8c2">
+				<Name>ОченьБольшой</Name>
+				<Code>000000006</Code>
+				<Description>Очень большой</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="f5a62311-795a-4a0e-b129-512ab405e81c">
+				<Name>Средний</Name>
+				<Code>000000004</Code>
+				<Description>Средний</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="128fd03e-0199-45ab-ad38-2a163e78d7c2">
+		<Name>Ценность</Name>
+		<Code>000000002</Code>
+		<Description>Ценность</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="0d2c010b-ec4c-4ba4-a7a7-ec10be816d85">
+				<Name>Высокая</Name>
+				<Code>000000009</Code>
+				<Description>Высокая</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0f86b995-2687-4270-90b2-d28a35a1d970">
+				<Name>Низкая</Name>
+				<Code>000000007</Code>
+				<Description>Низкая</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="d4579663-2074-4939-9780-7f8ceea7f203">
+				<Name>ОченьВысокая</Name>
+				<Code>000000010</Code>
+				<Description>Очень высокая</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="76dbf4e0-d395-46e9-b82d-571502b04c1b">
+				<Name>Средняя</Name>
+				<Code>000000008</Code>
+				<Description>Средняя</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

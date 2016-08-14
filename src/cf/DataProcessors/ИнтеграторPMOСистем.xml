@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<DataProcessor uuid="44652325-1ace-41e7-bd13-f424d08b12fd">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.ИнтеграторPMOСистем" category="Object">
+				<xr:TypeId>e40d372d-49e0-4a8c-9ae7-2cbeedcabdf6</xr:TypeId>
+				<xr:ValueId>15afa6e5-b5b5-428c-bc3f-dc9a5d139894</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.ИнтеграторPMOСистем" category="Manager">
+				<xr:TypeId>26e182f3-fab3-491d-b596-12c6b705a48b</xr:TypeId>
+				<xr:ValueId>2997849f-a0b4-4041-92e2-23f74fda2ab5</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ИнтеграторPMOСистем</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интегратор PMO систем</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.ИнтеграторPMOСистем.Form.KAITEN</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>KAITEN</Form>
+			<Form>GOGS</Form>
+			<Form>REDMINE</Form>
+			<Form>JIRA</Form>
+			<Form>TFS</Form>
+			<Form>TRELLO</Form>
+			<Form>KANBOARD</Form>
+			<Form>DEVPROM</Form>
+			<Form>GITHUB</Form>
+			<Form>GITLAB</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

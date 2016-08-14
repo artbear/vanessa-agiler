@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Group>Horizontal</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Задачи" id="1">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Задачи</DataPath>
+			<RowPictureDataPath>Задачи.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="ЗадачиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ЗадачиКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ЗадачиРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ЗадачиСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Задачи</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ЗадачиСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗадачиСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Задачи</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗадачиУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Задачи</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ЗадачиУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ЗадачиДата" id="14">
+					<DataPath>Задачи.Date</DataPath>
+					<ContextMenu name="ЗадачиДатаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ЗадачиДатаРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<LabelField name="ЗадачиНомер" id="17">
+					<DataPath>Задачи.Number</DataPath>
+					<ContextMenu name="ЗадачиНомерКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ЗадачиНомерРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<LabelField name="ЗадачиНаименование" id="20">
+					<DataPath>Задачи.Description</DataPath>
+					<ContextMenu name="ЗадачиНаименованиеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ЗадачиНаименованиеРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<CheckBoxField name="ЗадачиВыполнена" id="23">
+					<DataPath>Задачи.Executed</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗадачиВыполненаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ЗадачиВыполненаРасширеннаяПодсказка" id="25"/>
+				</CheckBoxField>
+				<LabelField name="ЗадачиБизнесПроцесс" id="26">
+					<DataPath>Задачи.BusinessProcess</DataPath>
+					<ContextMenu name="ЗадачиБизнесПроцессКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЗадачиБизнесПроцессРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="ЗадачиТочкаМаршрута" id="29">
+					<DataPath>Задачи.RoutePoint</DataPath>
+					<ContextMenu name="ЗадачиТочкаМаршрутаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЗадачиТочкаМаршрутаРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<Table name="ПланПроектов" id="32">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>ПланПроектов</DataPath>
+			<RowPictureDataPath>ПланПроектов.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="ПланПроектовКонтекстноеМеню" id="33"/>
+			<AutoCommandBar name="ПланПроектовКоманднаяПанель" id="34"/>
+			<ExtendedTooltip name="ПланПроектовРасширеннаяПодсказка" id="35"/>
+			<SearchStringAddition name="ПланПроектовСтрокаПоиска" id="36">
+				<AdditionSource>
+					<Item>ПланПроектов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланПроектовСтрокаПоискаКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ПланПроектовСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПланПроектовСостояниеПросмотра" id="39">
+				<AdditionSource>
+					<Item>ПланПроектов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланПроектовСостояниеПросмотраКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ПланПроектовСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПланПроектовУправлениеПоиском" id="42">
+				<AdditionSource>
+					<Item>ПланПроектов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланПроектовУправлениеПоискомКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="ПланПроектовУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПланПроектовДата" id="45">
+					<DataPath>ПланПроектов.Date</DataPath>
+					<ContextMenu name="ПланПроектовДатаКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ПланПроектовДатаРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+				<LabelField name="ПланПроектовНомер" id="48">
+					<DataPath>ПланПроектов.Number</DataPath>
+					<ContextMenu name="ПланПроектовНомерКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ПланПроектовНомерРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<LabelField name="ПланПроектовНаименование" id="51">
+					<DataPath>ПланПроектов.Description</DataPath>
+					<ContextMenu name="ПланПроектовНаименованиеКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ПланПроектовНаименованиеРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+				<CheckBoxField name="ПланПроектовВыполнена" id="54">
+					<DataPath>ПланПроектов.Executed</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПланПроектовВыполненаКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ПланПроектовВыполненаРасширеннаяПодсказка" id="56"/>
+				</CheckBoxField>
+				<LabelField name="ПланПроектовБизнесПроцесс" id="57">
+					<DataPath>ПланПроектов.BusinessProcess</DataPath>
+					<ContextMenu name="ПланПроектовБизнесПроцессКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ПланПроектовБизнесПроцессРасширеннаяПодсказка" id="59"/>
+				</LabelField>
+				<LabelField name="ПланПроектовТочкаМаршрута" id="60">
+					<DataPath>ПланПроектов.RoutePoint</DataPath>
+					<ContextMenu name="ПланПроектовТочкаМаршрутаКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ПланПроектовТочкаМаршрутаРасширеннаяПодсказка" id="62"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПланИтерацийПроектов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПланПроектов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План проектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Task.ЗадачиПоПроекту</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">БизнесПроцесс</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Задачи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Task.ОбязательныеЗадачиНаСпринт</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>БизнесПроцесс</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>
