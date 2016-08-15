@@ -28,11 +28,11 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>Автоаджайлер</Name>
+			<Name>Agiler</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Автоаджайлер</v8:content>
+					<v8:content>Agiler</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -139,23 +139,17 @@
 			<CommonForm>ФормаКонстант</CommonForm>
 			<Catalog>Проекты</Catalog>
 			<Catalog>Продукты</Catalog>
-			<Catalog>Свиньи</Catalog>
-			<Catalog>Куры</Catalog>
-			<Catalog>Люди</Catalog>
-			<Catalog>БизнесЦели</Catalog>
+			<Catalog>Контакты</Catalog>
 			<Catalog>Персоны</Catalog>
 			<Catalog>КлючевыеДействия</Catalog>
-			<Catalog>Истории</Catalog>
-			<Catalog>ЦелиПроекта</Catalog>
+			<Catalog>Функциональность</Catalog>
+			<Catalog>БизнесЦелиПроекта</Catalog>
 			<Catalog>ПользовательскиеИстории</Catalog>
 			<Catalog>Метрики</Catalog>
 			<Document>ПланированиеПроекта</Document>
 			<Document>Ретроспектива</Document>
 			<Document>ОпросSAFe</Document>
-			<Enum>РолиСвиней</Enum>
-			<Enum>РолиКур</Enum>
-			<Enum>ЦенностьДляБизнеса</Enum>
-			<Enum>ОбъемРабот</Enum>
+			<Enum>ФормаУчастияВПроекте</Enum>
 			<DataProcessor>МастерПланированияПроекта</DataProcessor>
 			<DataProcessor>ПланИтерацийПроектов</DataProcessor>
 			<DataProcessor>ИнтеграторPMOСистем</DataProcessor>
