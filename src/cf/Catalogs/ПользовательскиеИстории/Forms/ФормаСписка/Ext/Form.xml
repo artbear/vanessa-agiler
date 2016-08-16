@@ -122,7 +122,7 @@
 					<ExtendedTooltip name="ИмяFeatureФайлаРасширеннаяПодсказка" id="42"/>
 				</LabelField>
 				<LabelField name="НомерIssue" id="47">
-					<DataPath>Список.НомерIssue</DataPath>
+					<DataPath>1/51</DataPath>
 					<ContextMenu name="НомерIssueКонтекстноеМеню" id="48"/>
 					<ExtendedTooltip name="НомерIssueРасширеннаяПодсказка" id="49"/>
 				</LabelField>

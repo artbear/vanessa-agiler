@@ -102,11 +102,6 @@
 				</Button>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="НомерIssue" id="42">
-			<DataPath>Объект.НомерIssue</DataPath>
-			<ContextMenu name="НомерIssueКонтекстноеМеню" id="43"/>
-			<ExtendedTooltip name="НомерIssueРасширеннаяПодсказка" id="44"/>
-		</InputField>
 		<UsualGroup name="Группа2" id="30">
 			<Title>
 				<v8:item>

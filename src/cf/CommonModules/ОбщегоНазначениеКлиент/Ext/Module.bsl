@@ -4,7 +4,7 @@
 	"# encoding: utf-8
 	|# language: ru
 	|
-	|@issue_#НомерIssue
+	|@userstory_#Код
 	|
 	|Функционал: #Заголовок
 	|	Как #Роль
