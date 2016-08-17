@@ -13,9 +13,6 @@
 	"СоздаватьИнструкциюHTML": "Истина",
 	"КаталогOutputИнструкцияHTML": ".\out\publishHTML\doc-html",
 	"КомандаСделатьСкриншот": "nircmd.exe savescreenshot ",
-	"КаталогиБиблиотек": [
-		".\tools\vanessa-behavior\features\Libraries"
-	],
 	"ДелатьСкриншотПриВозникновенииОшибки": "Истина",
 	"КаталогOutputСкриншоты": ".\out\screenshots"
 }
