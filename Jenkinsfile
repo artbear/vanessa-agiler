@@ -79,12 +79,12 @@ node("slave") {
     } catch (e) {
          errors << "BDD status : ${e}"
     }
-    command = """allure generate ./build/out/allure -o ./build/publishHTML/allure-report"""
+    command = """allure generate ./build/out/allure -o ./build/out/publishHTML/allure-report"""
     if (isUnix()){ sh "${command}" } else {bat "chcp 1251\n${command}"}
         
     if (isUnix()) {
         // TODO: вызов pickles
-        sh "touch ./build/publishHTML/dhtml/Index.html"
+        sh "touch ./build/out/publishHTML/dhtml/Index.html"
     } else {
         bat '''@pickles -v
         @pickles -f .\\features -l ru -o .\\build\\out\\publishHTML\\dhtml -df dhtml --sn "Vanessa Agiler" --sv "1.0"'''
