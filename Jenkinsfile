@@ -44,6 +44,17 @@ node("slave") {
         }
     }
 
+    if (isUnix()) {
+        // TODO:
+        // Реализовать создание каталогов для Linux
+    } else {
+        bat '''if not exist ".\\out\\" mkdir .\\out\\
+        if not exist ".\\out\\publishHTML\\" mkdir .\\out\\publishHTML\\
+        if not exist ".\\out\\publishHTML\\dhtml\\" mkdir .\\out\\publishHTML\\dhtml\\
+        if not exist ".\\out\\publishHTML\\doc-html\\" mkdir .\\out\\publishHTML\\doc-html\\
+        if not exist ".\\out\\screenshots\\" mkdir .\\out\\screenshots\\'''
+    }
+
     stage "Сборка поставки"
 	
     echo "build catalogs"
