@@ -51,11 +51,11 @@ node("slave") {
     if (isUnix()) {sh "${command}"} else {bat "chcp 1251\n${command}"}       
     
     stage "Проверка поведения BDD"
-    def testsettings = "VBParams837UF.json";
+    def testsettings = "VBParams.json";
     if (env.PATHSETTINGS) {
         testsettings = env.PATHSETTINGS;
     }
-    command = """oscript -encoding=utf-8 tools/runner.os vanessa ${v8version} --ibname /F"./build/ib" --path ./build/out/vanessa-behavior.epf --pathsettings ./tools/JSON/${testsettings} """
+    command = """oscript -encoding=utf-8 tools/runner.os vanessa ${v8version} --ibname /F"./build/ib" --path ./tools/vanessa-behavior/vanessa-behavior.epf --pathsettings ./tools/JSON/${testsettings} """
     def errors = []
     try{
         if (isUnix()){
