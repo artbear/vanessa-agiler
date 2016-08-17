@@ -48,11 +48,11 @@ node("slave") {
         // TODO:
         // Реализовать создание каталогов для Linux
     } else {
-        bat '''if not exist ".\\out\\" mkdir .\\out\\
-        if not exist ".\\out\\publishHTML\\" mkdir .\\out\\publishHTML\\
-        if not exist ".\\out\\publishHTML\\dhtml\\" mkdir .\\out\\publishHTML\\dhtml\\
-        if not exist ".\\out\\publishHTML\\doc-html\\" mkdir .\\out\\publishHTML\\doc-html\\
-        if not exist ".\\out\\screenshots\\" mkdir .\\out\\screenshots\\'''
+        bat '''if not exist ".\\build\\out\\" mkdir .\\build\\out\\
+        if not exist ".\\build\\out\\publishHTML\\" mkdir .\\build\\out\\publishHTML\\
+        if not exist ".\\build\\out\\publishHTML\\dhtml\\" mkdir .\\build\\out\\publishHTML\\dhtml\\
+        if not exist ".\\build\\out\\publishHTML\\doc-html\\" mkdir .\\build\\out\\publishHTML\\doc-html\\
+        if not exist ".\\build\\out\\screenshots\\" mkdir .\\build\\out\\screenshots\\'''
     }
 
     stage "Сборка поставки"
@@ -79,10 +79,27 @@ node("slave") {
     } catch (e) {
          errors << "BDD status : ${e}"
     }
-
-    command = """allure generate ./build/out/allurereport -o ./build/htmlpublish"""
+    command = """allure generate ./build/out/allure -o ./build/publishHTML/allure-report"""
     if (isUnix()){ sh "${command}" } else {bat "chcp 1251\n${command}"}
-    publishHTML(target:[allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './build/htmlpublish', reportFiles: 'index.html', reportName: 'Allure report'])
+        
+    if (isUnix()) {
+        // TODO: вызов pickles
+        sh "touch ./build/publishHTML/dhtml/Index.html"
+    } else {
+        bat '''@pickles -v
+        @pickles -f .\\features -l ru -o .\\build\\out\\publishHTML\\dhtml -df dhtml --sn "Vanessa Agiler" --sv "1.0"'''
+    }
+
+    publishHTML(
+        target:[
+          allowMissing: false,
+          alwaysLinkToLastBuild: false,
+          keepAll: true,
+          reportDir: 'build/out/publishHTML',
+          reportFiles: 'allure-report/index.html, dhtml/Index.html',
+          reportName: 'HTML Report'
+        ]
+    )
 
     if (errors.size() > 0) {
         currentBuild.result = 'UNSTABLE'
