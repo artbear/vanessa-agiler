@@ -23,7 +23,7 @@ node("slave") {
             def sonarcommand = "./../../../tools/hudson.plugins.sonar.SonarRunnerInstallation/Main_Classic/bin/sonar-scanner -Dsonar.host.url=http://sonar.silverbulleters.org -Dsonar.login=${env.SonarOAuth}"
         }
         def makeAnalyzis = true
-        if (env.BRANCH_NAME = "develop") {
+        if (env.BRANCH_NAME == "develop") {
             echo 'Analysing develop branch'
         } else if (env.BRANCH_NAME.startsWith("release/")) {
             sonarcommand = sonarcommand + " -Dsonar.branch=${BRANCH_NAME}"
