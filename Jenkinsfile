@@ -26,8 +26,7 @@ node("slave") {
         
         // Get version
         def configurationText = readMavenPom file: 'src/cf/Configuration.xml'
-        //def configuration= new XmlSlurper().parseText(configurationText)
-        def configurationVersion = configuration.Configuration.Properties.Version.text()
+        def configurationVersion = (configurationText =~ /<Version>(.*)<\/Version>/)[0][1]
         sonarcommand = sonarcommand + " -Dsonar.projectVersion=${configurationVersion}"
 
         def makeAnalyzis = true
