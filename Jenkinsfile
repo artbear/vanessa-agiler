@@ -23,6 +23,13 @@ node("slave") {
         withCredentials([[$class: 'StringBinding', credentialsId: env.SonarOAuthCredentianalID, variable: 'SonarOAuth']]) {
             sonarcommand = sonarcommand + " -Dsonar.host.url=http://sonar.silverbulleters.org -Dsonar.login=${env.SonarOAuth}"
         }
+        
+        // Get version
+        def configurationText = new File("src/cf/Configuration.xml").text
+        def configuration= new XmlSlurper().parseText(configurationText)
+        def configurationVersion = configuration.Configuration?.Properties.Version.text()
+        sonarcommand = sonarcommand + " -Dsonar.projectVersion=${configurationVersion}"
+
         def makeAnalyzis = true
         if (env.BRANCH_NAME == "develop") {
             echo 'Analysing develop branch'
