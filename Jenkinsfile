@@ -25,7 +25,7 @@ node("slave") {
         }
         
         // Get version
-        def configurationText = readMavenPom file: 'src/cf/Configuration.xml'
+        def configurationText = readFile encoding: 'UTF-8', file: 'src/cf/Configuration.xml'
         def configurationVersion = (configurationText =~ /<Version>(.*)<\/Version>/)[0][1]
         sonarcommand = sonarcommand + " -Dsonar.projectVersion=${configurationVersion}"
 
