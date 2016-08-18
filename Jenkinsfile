@@ -25,7 +25,7 @@ node("slave") {
         }
         
         // Get version
-        def configurationText = new File("src/cf/Configuration.xml").text
+        def configurationText = readFile encoding: 'UTF-8', file: 'src/cf/Configuration.xml'
         def configuration= new XmlSlurper().parseText(configurationText)
         def configurationVersion = configuration.Configuration?.Properties.Version.text()
         sonarcommand = sonarcommand + " -Dsonar.projectVersion=${configurationVersion}"
