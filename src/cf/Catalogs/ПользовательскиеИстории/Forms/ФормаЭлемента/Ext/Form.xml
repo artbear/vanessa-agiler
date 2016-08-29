@@ -79,6 +79,26 @@
 						<Event name="OnChange">НеобходимыйФункционалПриИзменении</Event>
 					</Events>
 				</InputField>
+				<UsualGroup name="Группа4" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<InputField name="ФормаУчастияВПроекте" id="44">
+							<DataPath>Объект.ФормаУчастияВПроекте</DataPath>
+							<ContextMenu name="ФормаУчастияВПроектеКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ФормаУчастияВПроектеРасширеннаяПодсказка" id="46"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа3" id="38">
@@ -87,13 +107,12 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="39"/>
 			<ChildItems>
-				<InputField name="Наименование" id="1">
-					<DataPath>Объект.Description</DataPath>
-					<EditMode>EnterOnInput</EditMode>
+				<InputField name="Заголовок" id="79">
+					<DataPath>Объект.Заголовок</DataPath>
 					<AutoMaxWidth>false</AutoMaxWidth>
 					<AutoMaxHeight>false</AutoMaxHeight>
-					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
-					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+					<ContextMenu name="ЗаголовокКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ЗаголовокРасширеннаяПодсказка" id="81"/>
 				</InputField>
 				<Button name="ЗаполнитьНаименованиеИзНеобходимогоФункционала" id="40">
 					<Type>UsualButton</Type>
@@ -102,6 +121,36 @@
 				</Button>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="ПутьКФиче" id="73">
+			<DataPath>Объект.ПутьКФиче</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<WarningOnEdit>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь определяеться автоматически в форме синхронизации! Ручные корректировки не рекомендуются.</v8:content>
+				</v8:item>
+			</WarningOnEdit>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="ПутьКФичеКонтекстноеМеню" id="74"/>
+			<ExtendedTooltip name="ПутьКФичеРасширеннаяПодсказка" id="75"/>
+			<Events>
+				<Event name="Opening">ПутьКФичеОткрытие</Event>
+			</Events>
+		</InputField>
+		<InputField name="НомерФичи" id="76">
+			<DataPath>Объект.НомерФичи</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<WarningOnEdit>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер определяеться автоматически! Ручные корректировки не рекомендуются.</v8:content>
+				</v8:item>
+			</WarningOnEdit>
+			<ContextMenu name="НомерФичиКонтекстноеМеню" id="77"/>
+			<ExtendedTooltip name="НомерФичиРасширеннаяПодсказка" id="78"/>
+		</InputField>
 		<UsualGroup name="Группа2" id="30">
 			<Title>
 				<v8:item>
@@ -142,20 +191,75 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="ИмяFeatureФайла" id="35">
-			<DataPath>Объект.ИмяFeatureФайла</DataPath>
-			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
-			<ChoiceButton>true</ChoiceButton>
-			<OpenButton>true</OpenButton>
-			<ContextMenu name="ИмяFeatureФайлаКонтекстноеМеню" id="36"/>
-			<ExtendedTooltip name="ИмяFeatureФайлаРасширеннаяПодсказка" id="37"/>
-			<Events>
-				<Event name="StartChoice">ИмяFeatureФайлаНачалоВыбора</Event>
-				<Event name="Opening">ИмяFeatureФайлаОткрытие</Event>
-			</Events>
-		</InputField>
+		<UsualGroup name="Группа5" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Критерии достижения</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="72"/>
+			<ChildItems>
+				<Table name="КритерииДостижения" id="49">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.КритерииДостижения</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="КритерииДостиженияКонтекстноеМеню" id="50"/>
+					<AutoCommandBar name="КритерииДостиженияКоманднаяПанель" id="51"/>
+					<ExtendedTooltip name="КритерииДостиженияРасширеннаяПодсказка" id="52"/>
+					<SearchStringAddition name="КритерииДостиженияСтрокаПоиска" id="53">
+						<AdditionSource>
+							<Item>КритерииДостижения</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КритерииДостиженияСтрокаПоискаКонтекстноеМеню" id="54"/>
+						<ExtendedTooltip name="КритерииДостиженияСтрокаПоискаРасширеннаяПодсказка" id="55"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="КритерииДостиженияСостояниеПросмотра" id="56">
+						<AdditionSource>
+							<Item>КритерииДостижения</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КритерииДостиженияСостояниеПросмотраКонтекстноеМеню" id="57"/>
+						<ExtendedTooltip name="КритерииДостиженияСостояниеПросмотраРасширеннаяПодсказка" id="58"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="КритерииДостиженияУправлениеПоиском" id="59">
+						<AdditionSource>
+							<Item>КритерииДостижения</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="КритерииДостиженияУправлениеПоискомКонтекстноеМеню" id="60"/>
+						<ExtendedTooltip name="КритерииДостиженияУправлениеПоискомРасширеннаяПодсказка" id="61"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="КритерииДостиженияНомерСтроки" id="62">
+							<DataPath>Объект.КритерииДостижения.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КритерииДостиженияНомерСтрокиКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="КритерииДостиженияНомерСтрокиРасширеннаяПодсказка" id="64"/>
+						</LabelField>
+						<InputField name="КритерииДостиженияКритерий" id="65">
+							<DataPath>Объект.КритерииДостижения.Критерий</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КритерииДостиженияКритерийКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="КритерииДостиженияКритерийРасширеннаяПодсказка" id="67"/>
+						</InputField>
+						<CheckBoxField name="КритерииДостиженияВыполнен" id="68">
+							<DataPath>Объект.КритерииДостижения.Выполнен</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КритерииДостиженияВыполненКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="КритерииДостиженияВыполненРасширеннаяПодсказка" id="70"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

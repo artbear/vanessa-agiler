@@ -135,21 +135,24 @@
 			<Role>ПравоИнтеграции</Role>
 			<CommonModule>ОбщегоНазначениеКлиент</CommonModule>
 			<CommonModule>ОбщегоНазначениеСервер</CommonModule>
-			<CommandGroup>Feature</CommandGroup>
+			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonForm>ФормаКонстант</CommonForm>
 			<Catalog>Проекты</Catalog>
+			<Catalog>БизнесЦели</Catalog>
+			<Catalog>ПользовательскиеИстории</Catalog>
+			<Catalog>Персоны</Catalog>
+			<Catalog>Функциональности</Catalog>
+			<Catalog>КлючевыеДействия</Catalog>
+			<Catalog>Метрики</Catalog>
 			<Catalog>Продукты</Catalog>
 			<Catalog>Контакты</Catalog>
-			<Catalog>Персоны</Catalog>
-			<Catalog>КлючевыеДействия</Catalog>
-			<Catalog>Функциональность</Catalog>
-			<Catalog>БизнесЦелиПроекта</Catalog>
-			<Catalog>ПользовательскиеИстории</Catalog>
-			<Catalog>Метрики</Catalog>
 			<Document>ПланированиеПроекта</Document>
 			<Document>Ретроспектива</Document>
 			<Document>ОпросSAFe</Document>
 			<Enum>ФормаУчастияВПроекте</Enum>
+			<Enum>РежимыОбъединения</Enum>
+			<Enum>ПоляСинхронизации</Enum>
+			<Enum>ВариантыОбъединения</Enum>
 			<DataProcessor>МастерПланированияПроекта</DataProcessor>
 			<DataProcessor>ПланИтерацийПроектов</DataProcessor>
 			<DataProcessor>ИнтеграторPMOСистем</DataProcessor>
