@@ -50,6 +50,30 @@
 					<Comment/>
 				</Properties>
 			</EnumValue>
+			<EnumValue uuid="84abfc1f-360d-421b-8059-0fc6e70bb173">
+				<Properties>
+					<Name>ОбновитьНомерПользовательскойИсторииВФиче</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить номер пользовательской истории в feature</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="96ba5b3b-b373-4d07-b256-b75c8959cb6e">
+				<Properties>
+					<Name>ОбновитьПутьКФичеВПользовательскойИстории</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить путь к feature в пользовательской истории</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
 			<EnumValue uuid="879b9eae-1b1c-4797-becd-09cd11ecf345">
 				<Properties>
 					<Name>СозданиеFeatureФайла</Name>

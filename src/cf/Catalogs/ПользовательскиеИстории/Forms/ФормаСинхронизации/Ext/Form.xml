@@ -37,19 +37,10 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="БизнесЦель" id="49">
-			<DataPath>БизнесЦель</DataPath>
-			<ContextMenu name="БизнесЦельКонтекстноеМеню" id="50"/>
-			<ExtendedTooltip name="БизнесЦельРасширеннаяПодсказка" id="51"/>
-		</InputField>
-		<InputField name="ПользовательскаяИстория" id="46">
-			<DataPath>ПользовательскаяИстория</DataPath>
-			<ContextMenu name="ПользовательскаяИсторияКонтекстноеМеню" id="47"/>
-			<ExtendedTooltip name="ПользовательскаяИсторияРасширеннаяПодсказка" id="48"/>
-		</InputField>
 		<InputField name="ВариантОбъединения" id="43">
 			<DataPath>ВариантОбъединения</DataPath>
 			<ContextMenu name="ВариантОбъединенияКонтекстноеМеню" id="44"/>
@@ -160,6 +151,20 @@
 				</CheckBoxField>
 			</ChildItems>
 		</Table>
+		<InputField name="ПользовательскаяИстория" id="46">
+			<DataPath>ПользовательскаяИстория</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<DropListButton>false</DropListButton>
+			<ChoiceButton>false</ChoiceButton>
+			<ClearButton>false</ClearButton>
+			<SpinButton>false</SpinButton>
+			<OpenButton>true</OpenButton>
+			<CreateButton>false</CreateButton>
+			<ContextMenu name="ПользовательскаяИсторияКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ПользовательскаяИсторияРасширеннаяПодсказка" id="48"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="НастройкиСинхронизации" id="1">
@@ -253,17 +258,6 @@
 				<v8:Type>cfg:EnumRef.ВариантыОбъединения</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="БизнесЦель" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Бизнес-цель</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.БизнесЦели</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="ПользовательскаяИстория" id="4">
 			<Title>
 				<v8:item>
@@ -273,6 +267,26 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.ПользовательскиеИстории</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеСвернутойГруппы" id="5">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="БизнесЦель" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бизнес-цель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.БизнесЦели</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
@@ -337,12 +351,4 @@
 			<Action>ВыбратьFeature</Action>
 		</Command>
 	</Commands>
-	<Parameters>
-		<Parameter name="ВладелецНовогоЭлемента">
-			<Type>
-				<v8:Type>cfg:CatalogRef.БизнесЦели</v8:Type>
-			</Type>
-			<KeyParameter>true</KeyParameter>
-		</Parameter>
-	</Parameters>
 </Form>

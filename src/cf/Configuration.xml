@@ -149,10 +149,10 @@
 			<Document>ПланированиеПроекта</Document>
 			<Document>Ретроспектива</Document>
 			<Document>ОпросSAFe</Document>
-			<Enum>ФормаУчастияВПроекте</Enum>
-			<Enum>РежимыОбъединения</Enum>
-			<Enum>ПоляСинхронизации</Enum>
 			<Enum>ВариантыОбъединения</Enum>
+			<Enum>ПоляСинхронизации</Enum>
+			<Enum>РежимыОбъединения</Enum>
+			<Enum>ФормаУчастияВПроекте</Enum>
 			<DataProcessor>МастерПланированияПроекта</DataProcessor>
 			<DataProcessor>ПланИтерацийПроектов</DataProcessor>
 			<DataProcessor>ИнтеграторPMOСистем</DataProcessor>

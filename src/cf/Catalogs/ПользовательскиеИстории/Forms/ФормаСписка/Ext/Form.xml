@@ -89,38 +89,19 @@
 				<ColumnGroup name="Группа1" id="43">
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="44"/>
 					<ChildItems>
-						<LabelField name="Роль" id="22">
-							<DataPath>Список.Роль</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Как</v8:content>
-								</v8:item>
-							</Title>
-							<AutoCellHeight>true</AutoCellHeight>
-							<ContextMenu name="РольКонтекстноеМеню" id="23"/>
-							<ExtendedTooltip name="РольРасширеннаяПодсказка" id="24"/>
+						<LabelField name="Персона" id="57">
+							<DataPath>Список.Персона</DataPath>
+							<ContextMenu name="ПерсонаКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ПерсонаРасширеннаяПодсказка" id="59"/>
 						</LabelField>
 						<LabelField name="НеобходимыйФункционал" id="28">
 							<DataPath>Список.НеобходимыйФункционал</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Хочу</v8:content>
-								</v8:item>
-							</Title>
 							<AutoCellHeight>true</AutoCellHeight>
 							<ContextMenu name="НеобходимыйФункционалКонтекстноеМеню" id="29"/>
 							<ExtendedTooltip name="НеобходимыйФункционалРасширеннаяПодсказка" id="30"/>
 						</LabelField>
 						<LabelField name="КлючевоеДействие" id="25">
 							<DataPath>Список.КлючевоеДействие</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Чтобы</v8:content>
-								</v8:item>
-							</Title>
 							<AutoCellHeight>true</AutoCellHeight>
 							<ContextMenu name="КлючевоеДействиеКонтекстноеМеню" id="26"/>
 							<ExtendedTooltip name="КлючевоеДействиеРасширеннаяПодсказка" id="27"/>

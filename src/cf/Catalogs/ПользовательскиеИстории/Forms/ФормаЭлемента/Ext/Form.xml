@@ -28,8 +28,8 @@
 			<ThroughAlign>Use</ThroughAlign>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
 			<ChildItems>
-				<InputField name="Роль" id="7">
-					<DataPath>Объект.Роль</DataPath>
+				<InputField name="Персона" id="7">
+					<DataPath>Объект.Персона</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<AutoMaxWidth>false</AutoMaxWidth>
 					<AutoMaxHeight>false</AutoMaxHeight>
@@ -39,10 +39,10 @@
 							<v8:content>Как</v8:content>
 						</v8:item>
 					</InputHint>
-					<ContextMenu name="РольКонтекстноеМеню" id="8"/>
-					<ExtendedTooltip name="РольРасширеннаяПодсказка" id="9"/>
+					<ContextMenu name="ПерсонаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПерсонаРасширеннаяПодсказка" id="9"/>
 					<Events>
-						<Event name="OnChange">РольПриИзменении</Event>
+						<Event name="OnChange">ПерсонаПриИзменении</Event>
 					</Events>
 				</InputField>
 				<InputField name="КлючевоеДействие" id="10">

@@ -38,18 +38,6 @@
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 		</Properties>
 		<ChildObjects>
-			<EnumValue uuid="ca67f462-886e-43c4-a8c6-a161d8afabad">
-				<Properties>
-					<Name>ПользовательскаяИстория</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Пользовательская история (заголовок)</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-				</Properties>
-			</EnumValue>
 			<EnumValue uuid="747510cc-f07c-4517-9d0f-e775e241735d">
 				<Properties>
 					<Name>Путь</Name>
@@ -69,6 +57,18 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ca67f462-886e-43c4-a8c6-a161d8afabad">
+				<Properties>
+					<Name>Заголовок</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заголовок</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

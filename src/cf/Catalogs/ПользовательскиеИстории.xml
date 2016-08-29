@@ -370,11 +370,11 @@
 			</Attribute>
 			<Attribute uuid="379b5be9-f486-44cb-8885-f45568006e64">
 				<Properties>
-					<Name>Роль</Name>
+					<Name>Персона</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Роль</v8:content>
+							<v8:content>Персона</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -870,10 +870,10 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<Form>ФормаВыгрузкиВCSV</Form>
+			<Form>ФормаСинхронизации</Form>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаЭлемента</Form>
-			<Form>ФормаСинхронизации</Form>
-			<Form>ФормаВыгрузкиВCSV</Form>
 			<Command uuid="01749d25-053b-470e-9714-673733cc6b1a">
 				<Properties>
 					<Name>Синхронизировать</Name>
