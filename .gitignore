@@ -3,3 +3,4 @@ crowdin.yaml
 build/*
 log.txt
 .sonar/
+base/
