@@ -34,6 +34,11 @@
 				<CommandName>Form.Command.ВыбратьFeature</CommandName>
 				<ExtendedTooltip name="ФормаВыбратьFeatureРасширеннаяПодсказка" id="40"/>
 			</Button>
+			<Button name="ФормаОткрытьФичу" id="49">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьФичу</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьФичуРасширеннаяПодсказка" id="50"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -349,6 +354,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыбратьFeature</Action>
+		</Command>
+		<Command name="ОткрытьФичу" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть feature</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть фичу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФичу</Action>
 		</Command>
 	</Commands>
 </Form>
