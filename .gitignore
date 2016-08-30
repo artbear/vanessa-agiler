@@ -4,3 +4,4 @@ build/*
 log.txt
 .sonar/
 base/
+features/Справочник_проекты.feature
