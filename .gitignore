@@ -5,3 +5,5 @@ log.txt
 .sonar/
 base/
 features/Справочник_проекты.feature
+features/Новая папка/MainBDD.feature
+features/Новая папка/Новая папка/Справочник_проекты.feature

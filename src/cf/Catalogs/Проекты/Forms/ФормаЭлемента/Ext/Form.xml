@@ -21,11 +21,13 @@
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<AutoMaxHeight>false</AutoMaxHeight>
 			<ChoiceButton>true</ChoiceButton>
+			<OpenButton>true</OpenButton>
 			<TextEdit>false</TextEdit>
 			<ContextMenu name="КаталогПроектаКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="КаталогПроектаРасширеннаяПодсказка" id="9"/>
 			<Events>
 				<Event name="StartChoice">КаталогПроектаНачалоВыбора</Event>
+				<Event name="Opening">КаталогПроектаОткрытие</Event>
 			</Events>
 		</InputField>
 		<Table name="Цели" id="10">

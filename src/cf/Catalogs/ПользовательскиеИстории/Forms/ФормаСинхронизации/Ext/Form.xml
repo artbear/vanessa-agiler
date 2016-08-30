@@ -333,6 +333,7 @@
 					<v8:content>Найти feature по номеру</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Action>НайтиFeatureПоНомеру</Action>
 		</Command>
 		<Command name="ВыбратьFeature" id="4">
 			<Title>
