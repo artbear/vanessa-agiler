@@ -55,7 +55,6 @@
 			<ChangeRowSet>false</ChangeRowSet>
 			<ChangeRowOrder>false</ChangeRowOrder>
 			<SelectionMode>SingleRow</SelectionMode>
-			<RowSelectionMode>Row</RowSelectionMode>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<DataPath>НастройкиСинхронизации</DataPath>
