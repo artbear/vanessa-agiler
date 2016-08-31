@@ -168,6 +168,9 @@
 			<CreateButton>false</CreateButton>
 			<ContextMenu name="ПользовательскаяИсторияКонтекстноеМеню" id="47"/>
 			<ExtendedTooltip name="ПользовательскаяИсторияРасширеннаяПодсказка" id="48"/>
+			<Events>
+				<Event name="Opening">ПользовательскаяИсторияОткрытие</Event>
+			</Events>
 		</InputField>
 	</ChildItems>
 	<Attributes>

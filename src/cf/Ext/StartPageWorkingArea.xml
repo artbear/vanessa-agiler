@@ -9,5 +9,12 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Item>
+		<Item>
+			<Form>Catalog.ПользовательскиеИстории.Form.ФормаПоиска</Form>
+			<Height>10</Height>
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Item>
 	</Column>
 </StartPageWorkingArea>

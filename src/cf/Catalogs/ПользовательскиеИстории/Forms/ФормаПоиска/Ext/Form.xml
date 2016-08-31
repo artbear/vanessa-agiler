@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыполнитьПоиск" id="27">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ВыполнитьПоиск</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьПоискРасширеннаяПодсказка" id="28"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="7">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<InputField name="СтрокаПоиска" id="1">
+					<DataPath>СтрокаПоиска</DataPath>
+					<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="СтрокаПоискаРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="ЧеткостьПоиска" id="4">
+					<DataPath>ЧеткостьПоиска</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На сколько % результат поиска должен соответствовать строке поиска</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ЧеткостьПоискаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ЧеткостьПоискаРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="Tuning">ЧеткостьПоискаРегулирование</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="РезультатПоиска" id="11">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Header>false</Header>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>РезультатПоиска</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РезультатПоискаКонтекстноеМеню" id="12"/>
+			<AutoCommandBar name="РезультатПоискаКоманднаяПанель" id="13"/>
+			<ExtendedTooltip name="РезультатПоискаРасширеннаяПодсказка" id="14"/>
+			<SearchStringAddition name="РезультатПоискаСтрокаПоиска" id="15">
+				<AdditionSource>
+					<Item>РезультатПоиска</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатПоискаСтрокаПоискаКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="РезультатПоискаСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РезультатПоискаСостояниеПросмотра" id="18">
+				<AdditionSource>
+					<Item>РезультатПоиска</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатПоискаСостояниеПросмотраКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="РезультатПоискаСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РезультатПоискаУправлениеПоиском" id="21">
+				<AdditionSource>
+					<Item>РезультатПоиска</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатПоискаУправлениеПоискомКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="РезультатПоискаУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">РезультатПоискаВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="РезультатПоискаНайденнаяСсылка" id="24">
+					<DataPath>РезультатПоиска.НайденнаяСсылка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РезультатПоискаНайденнаяСсылкаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="РезультатПоискаНайденнаяСсылкаРасширеннаяПодсказка" id="26"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СтрокаПоиска" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧеткостьПоиска" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Четкость поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ЧеткостьПоиска</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="РезультатПоиска" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НайденнаяСсылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Найденная ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьПоиск" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить поиск</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьПоиск</Action>
+		</Command>
+	</Commands>
+</Form>

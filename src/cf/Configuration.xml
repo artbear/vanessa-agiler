@@ -129,13 +129,15 @@
 			<CommonPicture>Контроль</CommonPicture>
 			<CommonPicture>НСИ</CommonPicture>
 			<CommonPicture>Сервис</CommonPicture>
+			<CommonPicture>ОператорыПолнотекстовогоПоиска</CommonPicture>
 			<Role>ПолныеПрава</Role>
 			<Role>ПравоЗапуска</Role>
 			<Role>ПравоПланирования</Role>
 			<Role>ПравоИнтеграции</Role>
-			<CommonModule>ОбщегоНазначениеКлиент</CommonModule>
-			<CommonModule>ОбщегоНазначениеСервер</CommonModule>
+			<CommonModule>ОбщегоНазначенияКлиент</CommonModule>
+			<CommonModule>ОбщегоНазначенияСервер</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
+			<CommonModule>ОбщегоНазначенияВызовСервера</CommonModule>
 			<CommonForm>ФормаКонстант</CommonForm>
 			<Catalog>Проекты</Catalog>
 			<Catalog>БизнесЦели</Catalog>

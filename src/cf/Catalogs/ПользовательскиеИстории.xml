@@ -874,6 +874,7 @@
 			<Form>ФормаСинхронизации</Form>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаЭлемента</Form>
+			<Form>ФормаПоиска</Form>
 			<Command uuid="01749d25-053b-470e-9714-673733cc6b1a">
 				<Properties>
 					<Name>Синхронизировать</Name>
