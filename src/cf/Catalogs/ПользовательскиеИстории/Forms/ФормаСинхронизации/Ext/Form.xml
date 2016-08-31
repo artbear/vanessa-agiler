@@ -39,6 +39,11 @@
 				<CommandName>Form.Command.ОткрытьФичу</CommandName>
 				<ExtendedTooltip name="ФормаОткрытьФичуРасширеннаяПодсказка" id="50"/>
 			</Button>
+			<Button name="ФормаНайтиОбъектИнфобазы" id="51">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.НайтиОбъектИнфобазы</CommandName>
+				<ExtendedTooltip name="ФормаНайтиОбъектИнфобазыРасширеннаяПодсказка" id="52"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -394,6 +399,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьФичу</Action>
+		</Command>
+		<Command name="НайтиОбъектИнфобазы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти объект инфобазы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти объект инфобазы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НайтиОбъектИнфобазы</Action>
 		</Command>
 	</Commands>
 </Form>

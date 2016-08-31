@@ -23,6 +23,8 @@
 			<ChildItems>
 				<InputField name="СтрокаПоиска" id="1">
 					<DataPath>СтрокаПоиска</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
 					<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="СтрокаПоискаРасширеннаяПодсказка" id="3"/>
 				</InputField>
@@ -174,4 +176,16 @@
 			<Action>ВыполнитьПоиск</Action>
 		</Command>
 	</Commands>
+	<Parameters>
+		<Parameter name="ИмяСправочника">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
 </Form>
