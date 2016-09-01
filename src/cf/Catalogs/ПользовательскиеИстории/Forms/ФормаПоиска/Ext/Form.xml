@@ -9,6 +9,11 @@
 				<CommandName>Form.Command.ВыполнитьПоиск</CommandName>
 				<ExtendedTooltip name="ФормаВыполнитьПоискРасширеннаяПодсказка" id="28"/>
 			</Button>
+			<Button name="ФормаСоздатьНеНайденныйОбъектИнфобазы" id="40">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьНеНайденныйОбъектИнфобазы</CommandName>
+				<ExtendedTooltip name="ФормаСоздатьНеНайденныйОбъектИнфобазыРасширеннаяПодсказка" id="41"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -243,5 +248,32 @@
 			</ToolTip>
 			<Action>ВыполнитьПоиск</Action>
 		</Command>
+		<Command name="СоздатьНеНайденныйОбъектИнфобазы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать не найденный объект инфобазы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьНеНайденныйОбъектИнфобазы</Action>
+		</Command>
 	</Commands>
+	<Parameters>
+		<Parameter name="ИсходнаяСтрокаПоиска">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
 </Form>
