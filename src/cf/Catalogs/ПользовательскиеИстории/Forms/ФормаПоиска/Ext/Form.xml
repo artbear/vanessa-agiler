@@ -47,6 +47,33 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="Группа2" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительно</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<InputField name="ИмяСправочника" id="37">
+					<DataPath>ИмяСправочника</DataPath>
+					<Enabled>false</Enabled>
+					<ContextMenu name="ИмяСправочникаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ИмяСправочникаРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="СинонимПоляПоиска" id="34">
+					<DataPath>СинонимПоляПоиска</DataPath>
+					<Enabled>false</Enabled>
+					<ContextMenu name="СинонимПоляПоискаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СинонимПоляПоискаРасширеннаяПодсказка" id="36"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<Table name="РезультатПоиска" id="11">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
@@ -158,6 +185,47 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="СинонимПоляПоиска" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синоним поля поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийСправочник" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий справочник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяСправочника" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя справочника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВыполнитьПоиск" id="1">
@@ -176,16 +244,4 @@
 			<Action>ВыполнитьПоиск</Action>
 		</Command>
 	</Commands>
-	<Parameters>
-		<Parameter name="ИмяСправочника">
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-			<KeyParameter>true</KeyParameter>
-		</Parameter>
-	</Parameters>
 </Form>
