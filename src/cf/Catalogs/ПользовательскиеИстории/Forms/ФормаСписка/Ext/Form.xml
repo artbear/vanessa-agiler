@@ -109,7 +109,7 @@
 					</ChildItems>
 				</ColumnGroup>
 				<LabelField name="ИмяFeatureФайла" id="40">
-					<DataPath>1/42</DataPath>
+					<DataPath>Список.Owner</DataPath>
 					<AutoCellHeight>true</AutoCellHeight>
 					<ContextMenu name="ИмяFeatureФайлаКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="ИмяFeatureФайлаРасширеннаяПодсказка" id="42"/>
