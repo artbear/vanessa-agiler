@@ -81,6 +81,11 @@
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 			</SearchControlAddition>
 			<ChildItems>
+				<LabelField name="НомерФичи" id="60">
+					<DataPath>Список.НомерФичи</DataPath>
+					<ContextMenu name="НомерФичиКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="НомерФичиРасширеннаяПодсказка" id="62"/>
+				</LabelField>
 				<LabelField name="Заголовок" id="54">
 					<DataPath>Список.Заголовок</DataPath>
 					<ContextMenu name="ЗаголовокКонтекстноеМеню" id="55"/>
