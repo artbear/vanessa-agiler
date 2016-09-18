@@ -1,5 +1,5 @@
 #!groovy
-node("slave") {
+node("qanode") {
     stage "Получение исходных кодов"
     //git url: 'https://github.com/silverbulleters/vanessa-agiler.git'
     
@@ -11,13 +11,57 @@ node("slave") {
     }
     env.RUNNER_ENV="production";
 
-    if (isUnix()) {sh 'git config --system core.longpaths'} else {bat "git config --system core.longpaths"}
+    if (isUnix()) {sh 'git config --system core.longpaths true'} else {bat "git config --system core.longpaths true"}
 
     if (isUnix()) {sh 'git submodule update --init'} else {bat "git submodule update --init"}
     
+    stage "Подготовка конфигурации и окружения"
+
+    def srcpath = "./src/cf/";
+    if (env.SRCPATH){
+        srcpath = env.SRCPATH;
+    }
+
+    def v8version = "";
+    if (env.V8VERSION) {
+        v8version = "--v8version ${env.V8VERSION}"
+    }
+    def command = "oscript -encoding=utf-8 tools/init.os init-dev ${v8version} --src "+srcpath
+    timestamps {
+        if (isUnix()){
+            sh "${command}"
+        } else {
+            bat "chcp 1251\n${command}"
+        }
+    }
+
+    if (isUnix()) {
+        // TODO:
+        // Реализовать создание каталогов для Linux
+    } else {
+        bat '''if not exist ".\\build\\out\\" mkdir .\\build\\out\\
+        if not exist ".\\build\\out\\publishHTML\\" mkdir .\\build\\out\\publishHTML\\
+        if not exist ".\\build\\out\\publishHTML\\dhtml\\" mkdir .\\build\\out\\publishHTML\\dhtml\\
+        if not exist ".\\build\\out\\publishHTML\\doc-html\\" mkdir .\\build\\out\\publishHTML\\doc-html\\
+        if not exist ".\\build\\out\\screenshots\\" mkdir .\\build\\out\\screenshots\\'''
+    }
+
     stage "Контроль технического долга"
 
     if (env.QASONAR) {
+
+
+        if (env.QASONARTOOLS) {
+            def command_prepare = "oscript -encoding=utf-8 %QASONARTOOLS%\\run-prepare-analyzis.os"
+            timestamps {
+                if (isUnix()){
+                    sh "${command_prepare}"
+                } else {
+                    bat "chcp 1251\n${command_prepare}"
+                }
+            }
+        }
+             
         println env.QASONAR;
         def sonarcommand = "@\"./../../../tools/hudson.plugins.sonar.SonarRunnerInstallation/Main_Classic/bin/sonar-scanner\""
         withCredentials([[$class: 'StringBinding', credentialsId: env.SonarOAuthCredentianalID, variable: 'SonarOAuth']]) {
@@ -63,37 +107,6 @@ node("slave") {
         echo "QA runner not installed"
     }
 
-    stage "Подготовка конфигурации и окружения"
-
-    def srcpath = "./src/cf/";
-    if (env.SRCPATH){
-        srcpath = env.SRCPATH;
-    }
-
-    def v8version = "";
-    if (env.V8VERSION) {
-        v8version = "--v8version ${env.V8VERSION}"
-    }
-    def command = "oscript -encoding=utf-8 tools/init.os init-dev ${v8version} --src "+srcpath
-    timestamps {
-        if (isUnix()){
-            sh "${command}"
-        } else {
-            bat "chcp 1251\n${command}"
-        }
-    }
-
-    if (isUnix()) {
-        // TODO:
-        // Реализовать создание каталогов для Linux
-    } else {
-        bat '''if not exist ".\\build\\out\\" mkdir .\\build\\out\\
-        if not exist ".\\build\\out\\publishHTML\\" mkdir .\\build\\out\\publishHTML\\
-        if not exist ".\\build\\out\\publishHTML\\dhtml\\" mkdir .\\build\\out\\publishHTML\\dhtml\\
-        if not exist ".\\build\\out\\publishHTML\\doc-html\\" mkdir .\\build\\out\\publishHTML\\doc-html\\
-        if not exist ".\\build\\out\\screenshots\\" mkdir .\\build\\out\\screenshots\\'''
-    }
-
     stage "Сборка поставки"
 	
     echo "build catalogs"
@@ -105,6 +118,8 @@ node("slave") {
     if (env.PATHSETTINGS) {
         testsettings = env.PATHSETTINGS;
     }
+
+    //TODO add coverage report
     command = """oscript -encoding=utf-8 tools/runner.os vanessa ${v8version} --ibname /F"./build/ib" --path ./tools/vanessa-behavior/vanessa-behavior.epf --pathsettings ./tools/JSON/${testsettings} """
     def errors = []
     try{
