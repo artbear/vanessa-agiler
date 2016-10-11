@@ -121,6 +121,9 @@ node("qanode") {
 
     //TODO add coverage report
     command = """oscript -encoding=utf-8 tools/runner.os vanessa ${v8version} --ibname /F"./build/ib" --path ./tools/vanessa-behavior/vanessa-behavior.epf --pathsettings ./tools/JSON/${testsettings} """
+    if (env.QASONARTOOLS) {
+       command = "oscript -encoding=utf-8 %QASONARTOOLS%\\run-bdd-with-coverage.os"
+    }
     def errors = []
     try{
         if (isUnix()){
