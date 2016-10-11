@@ -1,3 +1,7 @@
 [submodule "tools/vanessa-behavior"]
 	path = tools/vanessa-behavior
 	url = https://github.com/silverbulleters/vanessa-behavior.git
+[submodule "tools/coverage1c"]
+	path = tools/coverage1c
+	url = http://dev.silverbulleters.org/KardanovIR/coverage1c.git
+	branch = refactored_files_parser
