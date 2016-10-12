@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСоздатьИзФичи" id="52">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьИзФичи</CommandName>
+				<ExtendedTooltip name="ФормаСоздатьИзФичиРасширеннаяПодсказка" id="53"/>
+			</Button>
+			<Button name="ФормаВыгрузитьВCSV" id="50">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыгрузитьВCSV</CommandName>
+				<ExtendedTooltip name="ФормаВыгрузитьВCSVРасширеннаяПодсказка" id="51"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
@@ -68,47 +81,32 @@
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="Наименование" id="16">
-					<DataPath>Список.Description</DataPath>
-					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
+				<LabelField name="НомерФичи" id="60">
+					<DataPath>Список.НомерФичи</DataPath>
+					<ContextMenu name="НомерФичиКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="НомерФичиРасширеннаяПодсказка" id="62"/>
+				</LabelField>
+				<LabelField name="Заголовок" id="54">
+					<DataPath>Список.Заголовок</DataPath>
+					<ContextMenu name="ЗаголовокКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ЗаголовокРасширеннаяПодсказка" id="56"/>
 				</LabelField>
 				<ColumnGroup name="Группа1" id="43">
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="44"/>
 					<ChildItems>
-						<LabelField name="Роль" id="22">
-							<DataPath>Список.Роль</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Как</v8:content>
-								</v8:item>
-							</Title>
-							<AutoCellHeight>true</AutoCellHeight>
-							<ContextMenu name="РольКонтекстноеМеню" id="23"/>
-							<ExtendedTooltip name="РольРасширеннаяПодсказка" id="24"/>
+						<LabelField name="Персона" id="57">
+							<DataPath>Список.Персона</DataPath>
+							<ContextMenu name="ПерсонаКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ПерсонаРасширеннаяПодсказка" id="59"/>
 						</LabelField>
 						<LabelField name="НеобходимыйФункционал" id="28">
 							<DataPath>Список.НеобходимыйФункционал</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Хочу</v8:content>
-								</v8:item>
-							</Title>
 							<AutoCellHeight>true</AutoCellHeight>
 							<ContextMenu name="НеобходимыйФункционалКонтекстноеМеню" id="29"/>
 							<ExtendedTooltip name="НеобходимыйФункционалРасширеннаяПодсказка" id="30"/>
 						</LabelField>
 						<LabelField name="КлючевоеДействие" id="25">
 							<DataPath>Список.КлючевоеДействие</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Чтобы</v8:content>
-								</v8:item>
-							</Title>
 							<AutoCellHeight>true</AutoCellHeight>
 							<ContextMenu name="КлючевоеДействиеКонтекстноеМеню" id="26"/>
 							<ExtendedTooltip name="КлючевоеДействиеРасширеннаяПодсказка" id="27"/>
@@ -116,13 +114,13 @@
 					</ChildItems>
 				</ColumnGroup>
 				<LabelField name="ИмяFeatureФайла" id="40">
-					<DataPath>Список.ИмяFeatureФайла</DataPath>
+					<DataPath>Список.Owner</DataPath>
 					<AutoCellHeight>true</AutoCellHeight>
 					<ContextMenu name="ИмяFeatureФайлаКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="ИмяFeatureФайлаРасширеннаяПодсказка" id="42"/>
 				</LabelField>
 				<LabelField name="НомерIssue" id="47">
-					<DataPath>Список.НомерIssue</DataPath>
+					<DataPath>Список.Ценность</DataPath>
 					<ContextMenu name="НомерIssueКонтекстноеМеню" id="48"/>
 					<ExtendedTooltip name="НомерIssueРасширеннаяПодсказка" id="49"/>
 				</LabelField>
@@ -186,17 +184,6 @@
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
-					<dcsset:item xsi:type="dcsset:StructureItemGroup">
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Роль</dcsset:field>
-								<dcsset:groupType>Items</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
-					</dcsset:item>
 					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
@@ -224,4 +211,36 @@
 			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
+	<Commands>
+		<Command name="ВыгрузитьВCSV" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в CSV</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить ВCSV</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВCSV</Action>
+		</Command>
+		<Command name="СоздатьИзФичи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать из feature</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать из фичи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьИзФичи</Action>
+		</Command>
+	</Commands>
 </Form>

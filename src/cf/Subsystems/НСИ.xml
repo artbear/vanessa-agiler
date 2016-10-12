@@ -20,12 +20,9 @@
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НСИ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Проекты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Свиньи</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Люди</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Куры</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Продукты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.РолиСвиней</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.РолиКур</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">c57ec4f2-d132-4812-9d8a-ed8f726c57a5</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">a8661853-f07d-4ca7-98f4-2c3c39cee80b</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

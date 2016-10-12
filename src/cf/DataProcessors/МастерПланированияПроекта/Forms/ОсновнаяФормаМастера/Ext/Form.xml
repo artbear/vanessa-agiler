@@ -194,14 +194,14 @@
 					<pl:id>714de48d-edd3-411d-bdf5-4c3ee60e427e</pl:id>
 				</pl:item>
 				<pl:dimension>
-					<pl:value xmlns:d6p1="http://v8.1c.ru/8.3/mobile-application/app" xsi:type="d6p1:DesTimeDBObjRefType">Task.ЗадачиПоПроекту</pl:value>
+					<pl:value xsi:nil="true"/>
 					<pl:text/>
 					<pl:borderColor>auto</pl:borderColor>
 					<pl:backColor>auto</pl:backColor>
 					<pl:textColor>auto</pl:textColor>
 					<pl:font kind="AutoFont"/>
 					<pl:item>
-						<pl:value xmlns:d7p1="http://v8.1c.ru/8.3/mobile-application/app" xsi:type="d7p1:DesTimeDBObjRefType">Task.ЗадачиПоПроекту</pl:value>
+						<pl:value xsi:nil="true"/>
 						<pl:text/>
 						<pl:borderColor>auto</pl:borderColor>
 						<pl:backColor>auto</pl:backColor>
@@ -210,7 +210,7 @@
 					</pl:item>
 				</pl:dimension>
 				<pl:dimension>
-					<pl:value xmlns:d6p1="http://v8.1c.ru/8.3/mobile-application/app" xsi:type="d6p1:DesTimeDBObjRefType">Task.ОбязательныеЗадачиНаСпринт</pl:value>
+					<pl:value xsi:nil="true"/>
 					<pl:text/>
 					<pl:borderColor>auto</pl:borderColor>
 					<pl:backColor>auto</pl:backColor>

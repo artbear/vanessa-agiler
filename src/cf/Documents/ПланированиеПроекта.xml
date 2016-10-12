@@ -369,21 +369,21 @@
 			</TabularSection>
 			<TabularSection uuid="808d5f8d-09b2-45b2-be2c-55cf42e37934">
 				<InternalInfo>
-					<xr:GeneratedType name="DocumentTabularSection.ПланированиеПроекта.Люди" category="TabularSection">
+					<xr:GeneratedType name="DocumentTabularSection.ПланированиеПроекта.Контакты" category="TabularSection">
 						<xr:TypeId>a7079fbe-4cd6-48d3-aa34-a3859d276eeb</xr:TypeId>
 						<xr:ValueId>933222ad-04e9-4827-8564-6d288e3989df</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="DocumentTabularSectionRow.ПланированиеПроекта.Люди" category="TabularSectionRow">
+					<xr:GeneratedType name="DocumentTabularSectionRow.ПланированиеПроекта.Контакты" category="TabularSectionRow">
 						<xr:TypeId>26258295-ae16-41b3-ac58-adcb1b3c5e81</xr:TypeId>
 						<xr:ValueId>1671b33a-16e4-47dc-bd5e-97996f79ec2a</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
-					<Name>Люди</Name>
+					<Name>Контакты</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Люди</v8:content>
+							<v8:content>Контакты</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -429,8 +429,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.Куры</v8:Type>
-								<v8:Type>cfg:CatalogRef.Свиньи</v8:Type>
+								<v8:Type>cfg:CatalogRef.Контакты</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
