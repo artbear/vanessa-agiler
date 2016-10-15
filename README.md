@@ -20,14 +20,16 @@
 
 ## Порядок коллективной разработки
 
-Состояние "ночной сборки" - [![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Vanessa-Agiler-Pipeline/develop)](http://ci.silverbulleters.org/job/Vanessa-Agiler-Pipeline/job/develop/)
+Состояние "ночной сборки" - ветка `develop`
+
+[![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Vanessa-Agiler-Pipeline/develop)](http://ci.silverbulleters.org/job/Vanessa-Agiler-Pipeline/job/develop/)
 
 * без Хранилища
 * с CI-CD
 * c проверкой качества
 * через `git-flow`
 
-более подробно [в правилах контрибьтинга](./CONTRIBIUTING.md)
+более подробно [в правилах контрибьтинга](./CONTRIBUTING.md)
 
 ## Лицензия
 
