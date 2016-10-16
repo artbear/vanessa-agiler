@@ -156,11 +156,13 @@
 			<Enum>ПоляСинхронизации</Enum>
 			<Enum>РежимыОбъединения</Enum>
 			<Enum>ФормаУчастияВПроекте</Enum>
+			<Enum>СистемыPMO</Enum>
 			<DataProcessor>МастерПланированияПроекта</DataProcessor>
 			<DataProcessor>ПланИтерацийПроектов</DataProcessor>
 			<DataProcessor>ИнтеграторPMOСистем</DataProcessor>
 			<InformationRegister>ИсторииПользователей</InformationRegister>
 			<InformationRegister>КачествоПроектнойДеятельности</InformationRegister>
+			<InformationRegister>ХранилищеИдентификаторов</InformationRegister>
 			<BusinessProcess>ПланПроекта</BusinessProcess>
 			<BusinessProcess>РегламентИтерации</BusinessProcess>
 			<BusinessProcess>ОценкаПроектаSAFE</BusinessProcess>
