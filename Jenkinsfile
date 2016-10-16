@@ -1,6 +1,14 @@
 #!groovy
 node("qanode") {
-    stage "Получение исходных кодов"
+  
+  def v8version = "";
+  if (env.V8VERSION) {
+      v8version = "--v8version ${env.V8VERSION}"
+  }
+    
+  stage('Получение исходных кодов') {
+
+    
     //git url: 'https://github.com/silverbulleters/vanessa-agiler.git'
     
     checkout scm
@@ -14,18 +22,14 @@ node("qanode") {
     if (isUnix()) {sh 'git config --system core.longpaths true'} else {bat "git config --system core.longpaths true"}
 
     if (isUnix()) {sh 'git submodule update --init'} else {bat "git submodule update --init"}
-    
-    stage "Подготовка конфигурации и окружения"
+  }
+  stage('Подготовка конфигурации и окружения') {
 
     def srcpath = "./src/cf/";
     if (env.SRCPATH){
         srcpath = env.SRCPATH;
     }
 
-    def v8version = "";
-    if (env.V8VERSION) {
-        v8version = "--v8version ${env.V8VERSION}"
-    }
     def command = "oscript -encoding=utf-8 tools/init.os init-dev ${v8version} --src "+srcpath
     timestamps {
         if (isUnix()){
@@ -45,8 +49,8 @@ node("qanode") {
         if not exist ".\\build\\out\\publishHTML\\doc-html\\" mkdir .\\build\\out\\publishHTML\\doc-html\\
         if not exist ".\\build\\out\\screenshots\\" mkdir .\\build\\out\\screenshots\\'''
     }
-
-    stage "Контроль технического долга"
+  }
+  stage('Контроль технического долга'){ 
 
     if (env.QASONAR) {
 
@@ -63,7 +67,7 @@ node("qanode") {
         }
              
         println env.QASONAR;
-        def sonarcommand = "@\"./../../../tools/hudson.plugins.sonar.SonarRunnerInstallation/Main_Classic/bin/sonar-scanner\""
+        def sonarcommand = "@\"./../../tools/hudson.plugins.sonar.SonarRunnerInstallation/Main_Classic/bin/sonar-scanner\""
         withCredentials([[$class: 'StringBinding', credentialsId: env.SonarOAuthCredentianalID, variable: 'SonarOAuth']]) {
             sonarcommand = sonarcommand + " -Dsonar.host.url=http://sonar.silverbulleters.org -Dsonar.login=${env.SonarOAuth}"
         }
@@ -83,11 +87,13 @@ node("qanode") {
             def PRNumber = env.BRANCH_NAME.tokenize("PR-")[0]
             def gitURLcommand = 'git config --local remote.origin.url'
             def gitURL = ""
+            
             if (isUnix()) {
                 gitURL = sh(returnStdout: true, script: gitURLcommand).trim() 
             } else {
                 gitURL = bat(returnStdout: true, script: gitURLcommand).trim() 
             }
+            
             def repository = gitURL.tokenize("/")[2] + "/" + gitURL.tokenize("/")[3]
             repository = repository.tokenize(".")[0]
             withCredentials([[$class: 'StringBinding', credentialsId: env.GithubOAuthCredentianalID, variable: 'githubOAuth']]) {
@@ -96,6 +102,7 @@ node("qanode") {
         } else {
             makeAnalyzis = false
         }
+
         if (makeAnalyzis) {
             if (isUnix()) {
                 sh '${sonarcommand}'
@@ -106,8 +113,8 @@ node("qanode") {
     } else {
         echo "QA runner not installed"
     }
-
-    stage "Сборка поставки"
+  }
+  stage('Сборка поставки'){
 	
     echo "build catalogs"
     command = """oscript -encoding=utf-8 tools/runner.os compileepf ${v8version} --ibname /F"./build/ib" ./ ./build/out/ """
@@ -166,9 +173,10 @@ node("qanode") {
     } else {
         //step([$class: 'ArtifactArchiver', artifacts: '**/build/out/*.cf', fingerprint: true])
     }
-
-    stage "Публикация релизов"
+  }
+  stage('Публикация релизов'){
 
     echo "stable if master, pre-release if have release, nigthbuild if develop"
-
+  
+  }
 }

@@ -1,0 +1,83 @@
+## Dont Forget set the travis env
+# travis env set DOCKER_USERNAME myusername
+# travis env set DOCKER_PASSWORD secretsecret
+## for private registry of silverbulleters with 1C docker containers
+# travis env set VANESSA_LICENSE_SERVER tcp://your-server-url
+## to use your mini server license manager
+# travis env set SONARSERVERAPIKEY yourkey
+## or
+# travis env set SONARSERVERAPIKEY myusername
+## for code inspection
+# travis env set INFOSTARTURL yourpublicationurl
+# travis env set INFOSTARTURL yourpublicationurl
+
+sudo: required
+
+env:
+  DOCKER_COMPOSE_VERSION: 1.4.2
+  SERVER_BASE_NAME: agiler
+  matrix:
+    - V8VERSION:
+        - 8.3.9.1800
+        - 8.3.8.1786
+    - DBTYPE:
+        - postgresql
+            POSTGRESQLVERSION:
+              - 9.4.7
+              - 9.5.1
+              - 9.6.2
+        - mssql
+            MSSQLVERSION:
+                - 2010
+                - 2012
+                - 2014
+                - 2016
+services:
+  - docker
+
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  - docker-compose pull
+
+install:
+  - docker pull silverbulleters/oscript-docker
+  - docker pull silverbulleters/sonar-bsl-runner
+  - docker pull silverbulleters/allure-core-runner
+  - docker pull silverbulleters/vanessa-deployka
+
+before_script:
+  - docker run silverbulleters/sonar-bsl-runner -v ${pwd}:/project/ /project/sonar.properties 
+  - docker run silverbulleters/oscript-docker -v ${pwd}:/project/ /project/tools/init.sh
+  - docker run silverbulleters/oscript-docker -v ${pwd}:/project/ /project/tools/compile.sh
+  - docker-compose up -d
+  - sleep 30
+  - docker run silverbulleters/vanessa-deployka -v ${pwd}:/project publish /project/build/ib server1c ${SERVER_BASE_NAME} 
+
+script:
+  - docker run silverbulleters/oscript-docker -v ${pwd}:/project/ oscript /project/tools/test-server.sh
+  - docker run silverbulleters/oscript-docker -v ${pwd}:/project/ oscript /project/tools/test.sh
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+        docker run silverbulleters/vanessa-packman -v ${pwd}:/project/ oscript packman.os stable
+    fi
+
+after_failure:
+  # todo add some extractions info
+
+before_deploy:
+  - docker pull silverbulleters/vanessa-grm
+  - docker pull silverbulleters/vanessa-infostart-publisher
+
+deploy:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+        docker run silverbulleters/vanessa-grm -v ${pwd}:/project/ oscript 1c-grm-api.os deploy-demo
+        docker run silverbulleters/vanessa-infostart-publisher -v ${pwd}:/project/ oscript infostart-publish ${INFOSTARTURL} ${INFOSTARTAPIKEY}
+    fi
+
+after_script:
+  - docker stop {docker -a -q}
+  - docker rm {docker -a -q}
