@@ -139,6 +139,7 @@
 			<CommonModule>ОбщегоНазначенияСервер</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>ОбщегоНазначенияВызовСервера</CommonModule>
+			<CommonModule>ПомощникВызоваСервисов</CommonModule>
 			<CommonForm>ФормаКонстант</CommonForm>
 			<Catalog>Проекты</Catalog>
 			<Catalog>БизнесЦели</Catalog>
