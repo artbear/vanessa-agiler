@@ -10,7 +10,7 @@
 		"IgnoreOnCIMainBuild",
 		"Draft"
 	],
-	"СоздаватьИнструкциюHTML": "Истина",
+	"СоздаватьИнструкциюHTML": "Ложь",
 	"КаталогOutputИнструкцияHTML": ".\..\..\build\out\publishHTML\doc-html",
 	"КомандаСделатьСкриншот": "nircmd.exe savescreenshot ",
 	"ДелатьСкриншотПриВозникновенииОшибки": "Ложь",
